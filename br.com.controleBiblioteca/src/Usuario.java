@@ -2,16 +2,16 @@ import java.util.ArrayList;
 
 public class Usuario {
 
-    private int cpf;
+    private String cpf;
     private String nome;
     private String endereco;
     private String telefone;
 
-    public int getCpf() {
+    public String getCpf() {
         return cpf;
     }
 
-    public void setCpf(int cpf) {
+    public void setCpf(String cpf) {
         this.cpf = cpf;
     }
 
@@ -41,7 +41,7 @@ public class Usuario {
 
 
 
-    public Usuario(int cpf, String endereco, String telefone, String nome) {
+    public Usuario(String cpf, String endereco, String telefone, String nome) {
         this.cpf = cpf;
         this.endereco = endereco;
         this.telefone = telefone;
@@ -69,7 +69,7 @@ public class Usuario {
             System.out.println("Usuario Cadastrado com sucesso.");
         }
 
-        public void atulizarUsuario(int cpf, String nome, String endereco, String telefone) {
+        public void atulizarUsuario(String cpf, String nome, String endereco, String telefone) {
             for(Usuario usuario : usuarios) {
                 if(usuario.getCpf() == cpf){
                     usuario.setNome(nome);
@@ -82,7 +82,7 @@ public class Usuario {
             System.out.println("Usuario com CPF " + cpf + " nao encontrado");
         }
 
-        public void removerUsuario(int cpf){
+        public void removerUsuario(String cpf){
             for (Usuario usuario : usuarios){
                 if(usuario.getCpf()==cpf){
                     usuarios.remove(usuario);
